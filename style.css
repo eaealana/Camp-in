@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--background);
+}
+
+/*--- ROOTS ----*/
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+}
+
+.title {
+    font: 600 1.7rem 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+
+    padding-left: 0.7rem;
+}
+
+/*--- LOGO ---*/
+.logo img {
+    margin: 1.4rem 2rem;
+}
+
+/*--- IMAGE - RIGHT ----*/
+.right img {
+    visibility: hidden;
+    z-index: 0;
+    width: 0;
+    height: 0;
+}
+
+/*---- FORM -----*/
+.form {
+    margin: 0 2rem;
+    padding: 4rem 3rem;
+    width: 28rem;
+    height: 34rem;
+
+    border-radius: 5px;
+    background: var(--form-background);
+    box-shadow: 0px 0px 10px rgb(241, 234, 165);
+}
+
+/*---- LOGIN ----*/
+.logIn {
+    display: flex;
+}
+
+.legend {
+    font: 500 1rem 'Poppins', sans-serif;
+    color: var(--text-title);
+    margin-top: 0.7rem;
+}
+
+/*----- INPUTS -----*/
+.inputs {
+    margin-top: 2rem;
+}
+
+.input {
+    width: 17rem;
+    height: 2rem;
+    padding: 1rem 1rem 1rem 2.4rem;
+
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    color: #FFF;
+    background: transparent;
+    background-image: url(./image/mail.svg);
+    background-repeat: no-repeat;
+    background-position: center left 10px;
+    transition: width 0.7s ease-in;
+}
+
+.input:hover,
+.input:focus {
+    outline: none;
+
+    border: 1px solid #ffc632;
+    background-image: url(./image/mail-focus.svg);
+    box-shadow: 0px 0px 5px 0px #ffc632;
+}
+
+input[type=password] {
+    background-image: url(./image/lock.svg);
+}
+
+input[type=password]:hover,
+input[type=password]:focus {
+    background-image: url(./image/lock-focus.svg);
+}
+
+label {
+    font: 500 1rem 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    color: var(--text-title);
+}
+
+/*---- CHECKBOX - NEW PASSWORD -----*/
+.checkboxPassword {
+    margin: 1rem 0;
+    display: flex;
+}
+
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+}
+
+input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: 0;
+    left: 0;
+    background-color: #24221f;
+    border-radius: 2px;
+    border: 1px solid #FFF;
+}
+
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 7px;
+    border: solid #ffc632;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 3px;
+    left: 6px;
+}
+
+.remindMe {
+    font: 400 0.8rem 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    color: #FFF;
+    margin: 0.7rem;
+}
+
+.newPassword {
+    font: 400 0.8rem 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    margin-top: 0.1rem;
+    margin-left: 5rem;
+    transition: color 0.5s;
+}
+
+/*---- BUTTON SUBMIT -----*/
+.submit button {
+    width: 22rem;
+    padding: 1rem;
+    background: var(--primary-color);
+    background-image: linear-gradient(-60deg,
+            transparent, transparent 40%,
+            #ffffff44 40%, #ffffff44 60%,
+            transparent 60%, transparent 100%);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    background-position: -150%;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    transition: background 1s;
+    font: 600 1rem 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+.submit button:hover {
+    background-position-x: 150%;
+    background-color: var(--primary-color);
+    box-shadow: 0px 0px 7px #949085;
+    transition: background-position-x 600ms;
+}
+
+/*----- CADASTRE - REGISTER ----*/
+.cadastre {
+    margin: 1rem 0 0 3rem;
+}
+
+.cadastre p,
+.register {
+    font: 400 0.9rem 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+
+.register {
+    font-weight: 700;
+    transition: color 0.5s;
+}
+
+.register:hover,
+.newPassword:hover {
+    color: var(--text-title);
+}
+
+/*--- FOR PC - RESPONSIVE -----*/
+@media (min-width:500px) {
+
+    /*--- IMAGE - RIGHT ----*/
+    .right img {
+        visibility: hidden;
+        z-index: 0;
+        width: 0;
+        height: 0;
+    }
+
+
+    /*---- FORM -----*/
+    .form {
+        margin: 1rem 2rem;
+        padding: 4rem 3rem;
+        width: 28rem;
+        height: 32rem;
+    }
+
+    /*----- INPUTS -----*/
+    .input {
+        width: 17rem;
+    }
+
+    .input:hover,
+    .input:focus {
+        width: 22rem;
+    }
+
+    /*--- NEW PASSWORD -----*/
+    .newPassword {
+        margin-left: 5.5rem;
+    }
+
+    /*---- CADASTRE ----*/
+    .cadastre {
+        margin: 1.4rem 0 0 3rem;
+    }
+}
+
+@media (min-width:550px) {
+
+    /*---- FORM -----*/
+    .form {
+        margin: 1rem 4rem;
+    }
+}
+
+
+@media (min-width:600px) {
+
+    /*---- FORM -----*/
+    .form {
+        margin: 1rem 5rem;
+    }
+}
+
+@media (min-width:650px) {
+
+    /*---- FORM -----*/
+    .form {
+        margin: 1rem 6rem;
+    }
+}
+
+@media (min-width:700px) {
+
+    /*---- FORM -----*/
+    .form {
+        margin: 1rem 9rem;
+    }
+}
+
+@media (min-width: 750px) {
+
+    /*--- IMAGE - RIGHT ----*/
+    .right img {
+        float: right;
+        width: 40vw;
+        height: 100vh;
+        visibility: visible;
+        z-index: 1;
+    }
+
+    /*---- FORM -----*/
+    .form {
+        margin: 1rem 2rem;
+        padding: 3rem 2rem;
+        width: 26rem;
+    }
+}
+
+@media (min-width: 800px) {
+
+    /*---- FORM -----*/
+    .form {
+        margin: 1rem 1.2rem;
+        padding: 4rem 3rem;
+        width: 28rem;
+    }
+}
+
+@media (min-width: 850px) {
+
+    /*---- FORM -----*/
+    .form {
+        margin: 1rem 3rem;
+    }
+}
+
+@media (min-width: 900px) {
+
+    /*---- FORM -----*/
+    .form {
+        margin: 1rem 4rem;
+    }
+}
+
+@media (min-width: 950px) {
+
+    /*---- FORM -----*/
+    .form {
+        margin: 1rem 5rem;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    /*---- FORM -----*/
+    .form {
+        margin: 1rem 7rem;
+    }
+
+}
+
+@media (min-width: 1100px) {
+
+    /*---- FORM -----*/
+    .form {
+        margin: 1rem 8rem;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    /*---- FORM -----*/
+    .form {
+        margin: 1rem 10rem;
+    }
+}
