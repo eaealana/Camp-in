@@ -43,8 +43,8 @@ html {
 /*---- FORM -----*/
 .form {
     margin: 0 1.3rem;
-    padding: 3.7rem 1rem 0 3rem;
-    width: 23rem;
+    padding: 3.7rem 1rem 0 2rem;
+    width: 20rem;
     height: 34rem;
 
     border-radius: 5px;
@@ -278,7 +278,6 @@ input[type=checkbox]:checked:after {
         margin: 1rem 4rem;
     }
 }
-
 
 @media (min-width:600px) {
 
