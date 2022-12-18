@@ -45,7 +45,7 @@ export const ContainerItens = styled.div`
   padding: 3rem 2rem;
   margin: 2rem auto;
   height: 28rem;
-  width: 25rem;
+  width: 23rem;
 
   border-radius: 5px;
   background: var(--form-background);
@@ -218,7 +218,7 @@ export const NewAccount = styled.p`
 `;
 
 export const Button = styled.button`
-  width: 21rem;
+  width: 19rem;
   margin: 1rem 0;
   padding: 0.5rem;
   background: var(--button-color);
