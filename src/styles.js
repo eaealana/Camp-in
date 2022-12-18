@@ -36,17 +36,16 @@ export const Image = styled.img`
 `;
 
 export const ContainerLeft = styled.div`
-
-@media (min-width: 700px) {
-  width: 60vw;
-}
-`
+  @media (min-width: 700px) {
+    width: 60vw;
+  }
+`;
 
 export const ContainerItens = styled.div`
   padding: 3rem 2rem;
   margin: 2rem auto;
   height: 28rem;
-  width: 28rem;
+  width: 25rem;
 
   border-radius: 5px;
   background: var(--form-background);
@@ -80,7 +79,7 @@ export const InputLabel = styled.p`
 `;
 
 export const InputEmail = styled.input`
-  width: 20rem;
+  width: 17rem;
   height: 2rem;
   margin-bottom: 1rem;
   padding: 1rem 1rem 1rem 2.4rem;
@@ -97,7 +96,7 @@ export const InputEmail = styled.input`
 
   &:focus,
   &:hover {
-    width: 24rem;
+    width: 20rem;
     border: 1px solid #ffc632;
     background-image: url("${MailFocus}");
     box-shadow: 0px 0px 5px 0px #ffc632;
@@ -106,7 +105,7 @@ export const InputEmail = styled.input`
 `;
 
 export const InputPassword = styled.input`
-  width: 20rem;
+  width: 17rem;
   height: 2rem;
   margin-bottom: 1rem;
   padding: 1rem 1rem 1rem 2.4rem;
@@ -123,7 +122,7 @@ export const InputPassword = styled.input`
 
   &:focus,
   &:hover {
-    width: 24rem;
+    width: 20rem;
 
     outline: none;
     border: 1px solid #ffc632;
@@ -134,7 +133,12 @@ export const InputPassword = styled.input`
 
 export const DivCheckbox = styled.div`
   display: flex;
+  justify-content: space-between;
   margin: 0.7rem 0;
+
+  div {
+    display: flex;
+  }
 `;
 
 export const Checkbox = styled.input`
@@ -172,18 +176,16 @@ export const Checkbox = styled.input`
 `;
 
 export const RemindMe = styled.p`
-  margin: 0.1rem 0 0 0.7rem;
-
-  font: 400 0.8rem "Roboto", sans-serif;
+margin: 0.2rem 0 0 0.7rem;
+  font: 400 0.7rem "Roboto", sans-serif;
   letter-spacing: 1px;
   color: var(--text-title);
 `;
 
 export const NewPassword = styled.p`
   margin-top: 0.1rem;
-  margin-left: 8.5rem;
 
-  font: 400 0.8rem "Roboto", sans-serif;
+  font: 400 0.7rem "Roboto", sans-serif;
   letter-spacing: 1px;
   color: var(--button-color);
   cursor: pointer;
@@ -191,7 +193,7 @@ export const NewPassword = styled.p`
   transition: color 0.5s;
 
   &:hover {
-    color: var(--text-title)
+    color: var(--text-title);
   }
 `;
 
@@ -210,13 +212,13 @@ export const NewAccount = styled.p`
 
   &:hover {
     span {
-      color: var(--text-title)
+      color: var(--text-title);
     }
   }
 `;
 
 export const Button = styled.button`
-  width: 24rem;
+  width: 21rem;
   margin: 1rem 0;
   padding: 0.5rem;
   background: var(--button-color);

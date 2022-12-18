@@ -25,7 +25,7 @@ const App = () => {
   return (
     <Main>
       <ContainerLeft>
-      <Logo src={ImageLogo} />
+        <Logo src={ImageLogo} />
 
         <ContainerItens>
 
@@ -38,12 +38,15 @@ const App = () => {
           <InputLabel>Senha</InputLabel>
           <InputPassword type="password" />
 
-        <DivCheckbox>
-        <Checkbox type="checkbox"/>
-          <RemindMe>Lembre-me</RemindMe>
-          <NewPassword>Esqueci minha senha</NewPassword>
-        </DivCheckbox>
-  
+
+          <DivCheckbox>
+            <div>
+              <Checkbox type="checkbox" />
+              <RemindMe>Lembre-me</RemindMe>
+            </div>
+            <NewPassword>Esqueci minha senha</NewPassword>
+          </DivCheckbox>
+
 
 
           <Button>Entrar</Button>
